@@ -16,12 +16,13 @@ public class ParkingData {
 	private String markedTime;
 	private String rpStatePlate;
 	private String plateExpiryDate;
+	private String vin;
 	private String make;
 	private String bodyStyle;
 	private String color;
 	private String location;
 	private String route;
-	private int agency;
+	private String agency;
 	private String violationCode;
 	private String violationDescription;
 	private long fineAmount;
@@ -29,8 +30,8 @@ public class ParkingData {
 	private double longitude;
 	
 	public ParkingData(long ticketNumber, String issueDate, String issueTime, String meterId, String markedTime,
-			String rpStatePlate, String plateExpiryDate, String make, String bodyStyle, String color, String location,
-			String route, int agency, String violationCode, String violationDescription, long fineAmount,
+			String rpStatePlate, String plateExpiryDate, String vin, String make, String bodyStyle, String color, String location,
+			String route, String agency, String violationCode, String violationDescription, long fineAmount,
 			double latitude, double longitude) {
 		super();
 		this.ticketNumber = ticketNumber;
@@ -40,6 +41,7 @@ public class ParkingData {
 		this.markedTime = markedTime;
 		this.rpStatePlate = rpStatePlate;
 		this.plateExpiryDate = plateExpiryDate;
+		this.vin = vin;
 		this.make = make;
 		this.bodyStyle = bodyStyle;
 		this.color = color;
@@ -124,10 +126,10 @@ public class ParkingData {
 	public void setRoute(String route) {
 		this.route = route;
 	}
-	public int getAgency() {
+	public String getAgency() {
 		return agency;
 	}
-	public void setAgency(int agency) {
+	public void setAgency(String agency) {
 		this.agency = agency;
 	}
 	public String getViolationCode() {
@@ -159,6 +161,12 @@ public class ParkingData {
 	}
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
+	}
+	public String getVin() {
+		return vin;
+	}
+	public void setVin(String vin) {
+		this.vin = vin;
 	}
 
 }
